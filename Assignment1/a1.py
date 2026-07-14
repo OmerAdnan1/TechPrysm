@@ -2,7 +2,7 @@
 # Implement news subscription model using best practices learnt here, where a Subscriber can Subscriber
 # to news/updates on in a mobile app, as soon as a new update is published(new object created),
 # all Subscriberd Subscribers should get notification message.
-
+# a1
 
 from abc import ABC, abstractmethod
 from enum import Enum
