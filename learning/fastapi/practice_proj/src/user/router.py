@@ -7,13 +7,6 @@ from src.utils.db import get_db
 user_routes = APIRouter(prefix="/user")
 
 
-@user_routes.post("/create_user")
-def register(body: UserSchema, db:Session = Depends(get_db), status_code=status.HTTP_201_CREATED, return_model=UserResponseSchema):
+@user_routes.post("/create_user", status_code=status.HTTP_201_CREATED, response_model=UserResponseSchema)
+def register(body: UserSchema, db:Session = Depends(get_db)):
     return controller.register(body, db)
-
-
-
-
-
-
-
